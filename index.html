@@ -332,23 +332,27 @@
 
 
 
-        .hero-section {
-            position: relative;
-            min-height: calc(100vh - 90px);
-            display: flex;
-            align-items: center;
-            padding: 60px 6%;
-            background: var(--hero-overlay), 
-url('file:///C:/Users/ALARABY/Downloads/images (2).jpg')center/cover no-repeat;            overflow: hidden;
-            transition: background 0.4s ease;
-        }
+ .hero-section {
+    position: relative;
+    min-height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    padding: 60px 6%;
 
-        body:has(#lang-toggle:checked) .hero-section {
-            background: linear-gradient(to right, rgba(10, 8, 6, 0.94) 35%, rgba(10, 8, 6, 0.45) 100%), 
-url('file:///C:/Users/ALARABY/Downloads/images (2).jpg')  center/cover no-repeat;        }
-        body:has(#theme-mode-toggle:not(:checked)):has(#lang-toggle:checked) .hero-section {
-            background: linear-gradient(to right, rgba(252, 251, 250, 0.96) 35%, rgba(252, 251, 250, 0.5) 100%), 
-url('file:///C:/Users/ALARABY/Downloads/images (2).jpg') center/cover no-repeat;       }
+    background: var(--hero-overlay), url('img/01-25-23-7561770.jpg') center/cover no-repeat;            
+    overflow: hidden;
+    transition: background 0.4s ease;
+}
+
+body:has(#lang-toggle:checked) .hero-section {
+    background: linear-gradient(to right, rgba(10, 8, 6, 0.94) 35%, rgba(10, 8, 6, 0.45) 100%), 
+    url('img/01-25-23-7561770.jpg') center/cover no-repeat;        
+}
+
+body:has(#theme-mode-toggle:not(:checked)):has(#lang-toggle:checked) .hero-section {
+    background: linear-gradient(to right, rgba(252, 251, 250, 0.96) 35%, rgba(252, 251, 250, 0.5) 100%), 
+    url('img/01-25-23-7561770.jpg') center/cover no-repeat;       
+}
 
         .hero-content {
             max-width: 650px;
