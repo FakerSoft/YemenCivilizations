@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حضارات اليمن | تراث عريق .. تاريخ يتجدد</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        
+        
+        :root {
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-gold: 0 10px 30px rgba(197, 160, 89, 0.15);
+        }
+
+      
+        body:has(#theme-mode-toggle:checked) {
+            --bg-deep: #0a0806;
+            --bg-card: #14100c;
+            --bg-card-hover: #1e1812;
+            --gold: #c5a059;
+            --gold-light: #dfc28d;
+            --text-light: #f3ede2;
+            --text-muted: #a89f91;
+            --border-gold: rgba(197, 160, 89, 0.2);
+            --border-gold-heavy: rgba(197, 160, 89, 0.6);
+            --hero-overlay: linear-gradient(to left, rgba(10, 8, 6, 0.94) 35%, rgba(10, 8, 6, 0.45) 100%);
+        }
+
+      
+        body:has(#theme-mode-toggle:not(:checked)) {
+            --bg-deep: #fcfbfa;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f5f0e3;
+            --gold: #b38942;
+            --gold-light: #c5a059;
+            --text-light: #2c251a;
+            --text-muted: #6e614d;
+            --border-gold: rgba(179, 137, 66, 0.25);
+            --border-gold-heavy: rgba(179, 137, 66, 0.6);
+            --hero-overlay: linear-gradient(to left, rgba(252, 251, 250, 0.96) 35%, rgba(252, 251, 250, 0.5) 100%);
+        }
+
+   
+        body:has(#lang-toggle:checked) {
+            direction: ltr !important;
+        }
+
+      
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-deep);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-light);
+        }
+
+  
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-light);
+            font-family: 'Cairo', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.7;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+       
+        .page-radio, .theme-toggle-checkbox, .lang-toggle-checkbox {
+            display: none !important;
+        }
+
+       
+        .text-en {
+            display: none !important;
+        }
+        .text-ar {
+            display: inline-block;
+        }
+        h1.text-ar, h2.text-ar, h3.text-ar, h4.text-ar, p.text-ar, div.text-ar, label.text-ar {
+            display: block;
+        }
+
+        body:has(#lang-toggle:checked) .text-ar {
+            display: none !important;
+        }
+        body:has(#lang-toggle:checked) .text-en {
+            display: inline-block !important;
+        }
+        body:has(#lang-toggle:checked) h1.text-en, 
+        body:has(#lang-toggle:checked) h2.text-en, 
+        body:has(#lang-toggle:checked) h3.text-en, 
+        body:has(#lang-toggle:checked) h4.text-en, 
+        body:has(#lang-toggle:checked) p.text-en, 
+        body:has(#lang-toggle:checked) div.text-en, 
+        body:has(#lang-toggle:checked) label.text-en {
+            display: block !important;
+        }
+
+  
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 90px;
+            background: rgba(10, 8, 6, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-gold);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            transition: background-color 0.4s ease;
+        }
+
+        body:has(#theme-mode-toggle:not(:checked)) header {
+            background: rgba(252, 251, 250, 0.92);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            color: var(--gold);
+            font-size: 2rem;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        .logo-text h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            display: block;
+        }
+
+  
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul li label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        nav ul li label:hover {
+            color: var(--gold);
+        }
+
+        nav ul li label::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+
+        nav ul li label:hover::after {
+            width: 100%;
+        }
+
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .switch-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .switch-btn-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 22px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--bg-card-hover);
+            border: 1px solid var(--border-gold);
+            transition: .4s;
+            border-radius: 20px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: var(--gold);
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        .switch input:checked + .slider {
+            background-color: var(--bg-card);
+        }
+
+        .switch input:checked + .slider:before {
+            transform: translateX(22px);
+            background-color: var(--gold-light);
+        }
+
+  
+        .menu-toggle-checkbox {
+            display: none;
+        }
+
+        .menu-toggle-label {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 1002;
+        }
+
+        .menu-toggle-label span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--gold);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .pages-container {
+            margin-top: 90px;
+            min-height: calc(100vh - 90px);
+            position: relative;
+        }
+
+        .page-section {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+       
+        #tab-home:checked ~ .pages-container #home-page,
+        #tab-civilizations:checked ~ .pages-container #civilizations-page,
+        #tab-landmarks:checked ~ .pages-container #landmarks-page,
+        #tab-museum:checked ~ .pages-container #museum-page,
+        #tab-timeline:checked ~ .pages-container #timeline-page,
+        #tab-contact:checked ~ .pages-container #contact-page {
+            display: block;
+            animation: pageFadeIn 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+        }
+
+  
+        #tab-home:checked ~ header nav ul li label[for="tab-home"],
+        #tab-civilizations:checked ~ header nav ul li label[for="tab-civilizations"],
+        #tab-landmarks:checked ~ header nav ul li label[for="tab-landmarks"],
+        #tab-museum:checked ~ header nav ul li label[for="tab-museum"],
+        #tab-timeline:checked ~ header nav ul li label[for="tab-timeline"],
+        #tab-contact:checked ~ header nav ul li label[for="tab-contact"] {
+            color: var(--gold);
+        }
+
+        #tab-home:checked ~ header nav ul li label[for="tab-home"]::after,
+        #tab-civilizations:checked ~ header nav ul li label[for="tab-civilizations"]::after,
+        #tab-landmarks:checked ~ header nav ul li label[for="tab-landmarks"]::after,
+        #tab-museum:checked ~ header nav ul li label[for="tab-museum"]::after,
+        #tab-timeline:checked ~ header nav ul li label[for="tab-timeline"]::after,
+        #tab-contact:checked ~ header nav ul li label[for="tab-contact"]::after {
+            width: 100%;
+        }
+
+
+
+        .hero-section {
+            position: relative;
+            min-height: calc(100vh - 90px);
+            display: flex;
+            align-items: center;
+            padding: 60px 6%;
+            background: var(--hero-overlay), 
+url('file:///C:/Users/ALARABY/Downloads/images (2).jpg')center/cover no-repeat;            overflow: hidden;
+            transition: background 0.4s ease;
+        }
+
+        body:has(#lang-toggle:checked) .hero-section {
+            background: linear-gradient(to right, rgba(10, 8, 6, 0.94) 35%, rgba(10, 8, 6, 0.45) 100%), 
+url('file:///C:/Users/ALARABY/Downloads/images (2).jpg')  center/cover no-repeat;        }
+        body:has(#theme-mode-toggle:not(:checked)):has(#lang-toggle:checked) .hero-section {
+            background: linear-gradient(to right, rgba(252, 251, 250, 0.96) 35%, rgba(252, 251, 250, 0.5) 100%), 
+url('file:///C:/Users/ALARABY/Downloads/images (2).jpg') center/cover no-repeat;       }
+
+        .hero-content {
+            max-width: 650px;
+            z-index: 5;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--text-light);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            max-width: 550px;
+        }
+
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--bg-deep);
+            padding: 12px 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            border: 1px solid var(--gold);
+            cursor: pointer;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .btn-gold:hover {
+            background-color: transparent;
+            color: var(--gold);
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+            transform: translateY(-2px);
+        }
+
+        
+        .social-sidebar {
+            position: fixed;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 10;
+        }
+
+        body:has(#lang-toggle:checked) .social-sidebar {
+            left: auto;
+            right: 30px;
+        }
+
+        .social-sidebar a {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-gold);
+        }
+
+        .social-sidebar a:hover {
+            color: var(--gold);
+            transform: scale(1.1);
+            border-color: var(--gold);
+            box-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
+        }
+
+   
+        .stats-section {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-gold);
+            border-bottom: 1px solid var(--border-gold);
+            padding: 50px 6%;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gold);
+            text-shadow: 0 0 10px rgba(197, 160, 89, 0.1);
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-light);
+            display: inline-block;
+            position: relative;
+            padding: 0 45px;
+        }
+
+        .section-header h2::before,
+        .section-header h2::after {
+            content: "❖";
+            color: var(--gold);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+        }
+
+        .section-header h2::before { right: 0; }
+        .section-header h2::after { left: 0; }
+
+        .section-padding {
+            padding: 80px 6%;
+        }
+
+ 
+        .civilizations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .civ-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .civ-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .civ-img-container {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .civ-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .civ-card:hover .civ-img {
+            transform: scale(1.1);
+        }
+
+        .civ-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .civ-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .civ-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .intro-banner {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 50px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-text-side {
+            max-width: 60%;
+            z-index: 1;
+        }
+
+        .intro-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .intro-desc {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .intro-image-side {
+            width: 350px;
+            height: 220px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-gold-heavy);
+            z-index: 1;
+        }
+
+        .intro-image-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .landmarks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .landmark-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .landmark-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .landmark-img-container {
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .landmark-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .landmark-card:hover .landmark-img-container img {
+            transform: scale(1.08);
+        }
+
+        .landmark-content {
+            padding: 20px;
+        }
+
+        .landmark-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .landmark-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+       
+        .museum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .museum-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 8px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 320px;
+        }
+
+        .museum-card:hover {
+            border-color: var(--gold);
+            box-shadow: var(--shadow-gold);
+            transform: scale(1.03);
+        }
+
+        .museum-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .museum-card:hover .museum-icon {
+            transform: rotateY(360deg);
+        }
+
+        .museum-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .museum-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+      
+        .timeline-wrapper {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline-container {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            z-index: 1;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            z-index: -1;
+        }
+
+        .timeline-node {
+            text-align: center;
+            flex: 1;
+            position: relative;
+        }
+
+        .timeline-circle {
+            width: 24px;
+            height: 24px;
+            background-color: var(--bg-deep);
+            border: 3px solid var(--gold);
+            border-radius: 50%;
+            margin: 28px auto 20px auto;
+            transition: var(--transition);
+            box-shadow: 0 0 10px rgba(10, 8, 6, 1);
+        }
+
+        .timeline-node:hover .timeline-circle {
+            background-color: var(--gold);
+            box-shadow: 0 0 15px var(--gold);
+            transform: scale(1.3);
+        }
+
+        .timeline-date {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .timeline-text {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            padding: 0 10px;
+            line-height: 1.5;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info-panel {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 8px;
+            padding: 40px;
+        }
+
+        .contact-info-panel h3 {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .contact-info-panel p {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 8px;
+            padding: 40px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .form-control {
+            background-color: var(--bg-deep);
+            border: 1px solid var(--border-gold);
+            padding: 12px 15px;
+            border-radius: 4px;
+            color: var(--text-light);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+     
+        footer {
+            background-color: var(--bg-deep);
+            border-top: 1px solid var(--border-gold);
+            padding: 40px 6%;
+            text-align: center;
+        }
+
+        .footer-minimal-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            z-index: 99;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            text-decoration: none;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--gold);
+            color: var(--bg-deep);
+            transform: translateY(-5px);
+        }
+
+   
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(5, 4, 3, 0.96);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .modal:target {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: var(--bg-card);
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            max-width: 650px;
+            width: 100%;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 10px 45px rgba(197, 160, 89, 0.3);
+            transform: scale(0.85);
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .modal:target .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2rem;
+            color: var(--text-muted);
+            transition: var(--transition);
+            line-height: 1;
+            text-decoration: none;
+        }
+
+        .modal-close:hover {
+            color: var(--gold);
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-gold);
+            padding-bottom: 15px;
+        }
+
+      
+        .modal-body {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-height: 380px;
+            overflow-y: auto;
+            padding-right: 15px;
+            text-align: justify;
+        }
+
+      
+        body:has(#lang-toggle:checked) .modal-body {
+            padding-right: 0;
+            padding-left: 15px;
+        }
+
+        .modal-body p {
+            margin-bottom: 15px;
+        }
+
+        .modal-body ul {
+            padding-right: 20px;
+            margin-bottom: 15px;
+        }
+
+        body:has(#lang-toggle:checked) .modal-body ul {
+            padding-right: 0;
+            padding-left: 20px;
+        }
+
+        .modal-body li {
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        .modal-body::-webkit-scrollbar {
+            width: 5px;
+        }
+        .modal-body::-webkit-scrollbar-track {
+            background: rgba(197, 160, 89, 0.05);
+        }
+        .modal-body::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+
+        @keyframes pageFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+      
+        @media (max-width: 992px) {
+            .hero-title { font-size: 2.5rem; }
+            .intro-banner { flex-direction: column; padding: 30px; }
+            .intro-text-side { max-width: 100%; }
+            .intro-image-side { width: 100%; }
+            .contact-wrapper { grid-template-columns: 1fr; gap: 30px; }
+            
+            .menu-toggle-label {
+                display: flex;
+            }
+
+            nav {
+                position: fixed;
+                top: 90px;
+                right: -100%;
+                width: 280px;
+                height: calc(100vh - 90px);
+                background-color: var(--bg-card);
+                border-left: 1px solid var(--border-gold);
+                transition: var(--transition);
+                padding: 40px 30px;
+                z-index: 1000;
+                box-shadow: -10px 10px 30px rgba(0,0,0,0.5);
+            }
+
+            body:has(#lang-toggle:checked) nav {
+                right: auto;
+                left: -100%;
+                border-left: none;
+                border-right: 1px solid var(--border-gold);
+            }
+
+            body:has(#lang-toggle:checked) .menu-toggle-checkbox:checked ~ nav {
+                left: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            nav ul li label {
+                display: block;
+                font-size: 1.1rem;
+                border-bottom: 1px solid var(--border-gold);
+                padding-bottom: 12px;
+                width: 100%;
+            }
+
+            .menu-toggle-checkbox:checked ~ nav {
+                right: 0;
+            }
+
+            .menu-toggle-checkbox:checked ~ .menu-toggle-label span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+            .menu-toggle-checkbox:checked ~ .menu-toggle-label span:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle-checkbox:checked ~ .menu-toggle-label span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline-container {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-right: 40px;
+                gap: 40px;
+            }
+
+            body:has(#lang-toggle:checked) .timeline-container {
+                padding-right: 0;
+                padding-left: 40px;
+            }
+
+            .timeline-line {
+                width: 3px;
+                height: 100%;
+                top: 0;
+                right: 30px;
+                left: auto;
+            }
+
+            body:has(#lang-toggle:checked) .timeline-line {
+                right: auto;
+                left: 30px;
+            }
+
+            .timeline-node {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: right;
+                width: 100%;
+            }
+
+            body:has(#lang-toggle:checked) .timeline-node {
+                text-align: left;
+            }
+
+            .timeline-circle {
+                position: absolute;
+                right: -21px;
+                top: -15px;
+                margin: 0;
+            }
+
+            body:has(#lang-toggle:checked) .timeline-circle {
+                right: auto;
+                left: -21px;
+            }
+
+            .social-sidebar, .switch-wrapper span {
+                display: none;
+            }
+            .header-actions {
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <input type="checkbox" id="lang-toggle" class="lang-toggle-checkbox">
+    <input type="checkbox" id="theme-mode-toggle" class="theme-toggle-checkbox" checked>
+
+    <input type="radio" name="site-pages" id="tab-home" class="page-radio" checked>
+    <input type="radio" name="site-pages" id="tab-civilizations" class="page-radio">
+    <input type="radio" name="site-pages" id="tab-landmarks" class="page-radio">
+    <input type="radio" name="site-pages" id="tab-museum" class="page-radio">
+    <input type="radio" name="site-pages" id="tab-timeline" class="page-radio">
+    <input type="radio" name="site-pages" id="tab-contact" class="page-radio">
+
+
+    <header>
+        <div class="logo-container">
+            <span class="logo-icon">🏛️</span>
+            <div class="logo-text">
+                <h1 class="text-ar">حضارات اليمن</h1>
+                <h1 class="text-en">Yemen Civ</h1>
+                <span class="text-ar">تراث عريق .. تاريخ يتجدد</span>
+                <span class="text-en">Ancient Heritage .. Renewing History</span>
+            </div>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav>
+            <ul>
+                <li>
+                    <label for="tab-home" class="text-ar">الرئيسية</label>
+                    <label for="tab-home" class="text-en">Home</label>
+                </li>
+                <li>
+                    <label for="tab-civilizations" class="text-ar">الحضارات</label>
+                    <label for="tab-civilizations" class="text-en">Civilizations</label>
+                </li>
+                <li>
+                    <label for="tab-landmarks" class="text-ar">المعالم</label>
+                    <label for="tab-landmarks" class="text-en">Landmarks</label>
+                </li>
+                <li>
+                    <label for="tab-museum" class="text-ar">المتحف الرقمي</label>
+                    <label for="tab-museum" class="text-en">Digital Museum</label>
+                </li>
+                <li>
+                    <label for="tab-timeline" class="text-ar">الخط الزمني</label>
+                    <label for="tab-timeline" class="text-en">Timeline</label>
+                </li>
+                <li>
+                    <label for="tab-contact" class="text-ar">تواصل معنا</label>
+                    <label for="tab-contact" class="text-en">Contact Us</label>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+         
+            <div class="switch-wrapper">
+                <span class="switch-btn-label">🌙</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-mode-toggle-trigger" onchange="document.getElementById('theme-mode-toggle').click()">
+                    <span class="slider"></span>
+                </label>
+                <span class="switch-btn-label">☀️</span>
+            </div>
+
+            <div class="switch-wrapper">
+                <span class="switch-btn-label">العربية</span>
+                <label class="switch">
+                    <input type="checkbox" id="lang-toggle-trigger" onchange="document.getElementById('lang-toggle').click()">
+                    <span class="slider"></span>
+                </label>
+                <span class="switch-btn-label">English</span>
+            </div>
+        </div>
+    </header>
+
+   
+<div class="social-sidebar">
+        <a href="https://web.facebook.com/profile.php?id=61573113360759" target="_blank" data-tooltip="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/fakeralhajar" target="_blank" data-tooltip="إنستغرام"><i class="fab fa-instagram"></i></a>
+        <a href="https://t.me/faker_soft" target="_blank" data-tooltip="تليجرام"><i class="fab fa-telegram"></i></a>
+    </div>
+
+  
+    <main class="pages-container">
+
+
+        <div id="home-page" class="page-section">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <span class="hero-subtitle text-ar">استكشف</span>
+                    <span class="hero-subtitle text-en">EXPLORE</span>
+                    
+                    <h1 class="hero-title text-ar">حضارات اليمن القديمة</h1>
+                    <h1 class="hero-title text-en">Ancient Civilizations of Yemen</h1>
+                    
+                    <p class="hero-desc text-ar">رحلة عبر الزمن لاكتشاف أعظم الحضارات التي ازدهرت في أرض اليمن السعيد وأثرت في مسيرة التاريخ البشري من خلال الابتكارات المعمارية، خط المسند، وطرق التجارة التاريخية.</p>
+                    <p class="hero-desc text-en">A journey through time to discover the greatest civilizations that flourished in Arabia Felix and influenced human history through architectural innovations, Musnad script, and historic trade routes.</p>
+                    
+                    <div class="hero-buttons">
+                        <label for="tab-civilizations" class="btn-gold">
+                            <span class="text-ar">ابدأ الاستكشاف ➔</span>
+                            <span class="text-en">Start Exploring ➔</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label text-ar">تراث أصيل</span>
+                        <span class="stat-label text-en">Authentic Heritage</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label text-ar">عام من التاريخ</span>
+                        <span class="stat-label text-en">Years of History</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label text-ar">موقع أثري رئيسي</span>
+                        <span class="stat-label text-en">Main Archaeological Sites</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label text-ar">حضارات عظيمة</span>
+                        <span class="stat-label text-en">Great Civilizations</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">+3000</span>
+                        <span class="stat-label text-ar">قطعة أثرية مكتشفة</span>
+                        <span class="stat-label text-en">Discovered Artifacts</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding">
+                <div class="intro-banner">
+                    <div class="intro-text-side">
+                        <h3 class="intro-title text-ar">اليمن .. مهد الحضارات وموطن التاريخ العريق</h3>
+                        <h3 class="intro-title text-en">Yemen .. Cradle of Civilizations and Home of History</h3>
+                        
+                        <p class="intro-desc text-ar">منذ آلاف السنين، كانت حضارات اليمن القديمة شعلة مضيئة للعلم، الهندسة المعمارية، والزراعة الذكية. إن تراث هذه الأرض يمثل حلقة الوصل المفقودة التي ربطت بين الشرق والغرب عبر تجارة اللبان، البخور، والتوابل الفريدة.</p>
+                        <p class="intro-desc text-en">For thousands of years, the ancient civilizations of Yemen were a bright beacon of science, architecture, and smart agriculture. The heritage of this land represents the link that connected East and West through the trade of frankincense, incense, and unique spices.</p>
+                        
+                        <a href="#modal-about" class="btn-gold">
+                            <span class="text-ar">اكتشف المزيد</span>
+                            <span class="text-en">Discover More</span>
+                        </a>
+                    </div>
+                    <div class="intro-image-side">
+<img src="file:///C:/Users/ALARABY/Downloads/images (4).jpg" alt="Yemen Heritage">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+   
+        <div id="civilizations-page" class="page-section section-padding">
+            <div class="section-header">
+                <h2 class="text-ar">الحضارات اليمنية العظيمة</h2>
+                <h2 class="text-en">Great Yemeni Civilizations</h2>
+            </div>
+            
+            <div class="civilizations-grid">
+                
+                <div class="civ-card">
+                    <div class="civ-img-container">
+                        <img class="civ-img" src="C:\Users\ALARABY\Downloads\01-25-23-7561770.jpg" alt="Saba">
+                    </div>
+                    <div class="civ-content">
+                        <h3 class="civ-title text-ar">مملكة سبأ</h3>
+                        <h3 class="civ-title text-en">Kingdom of Saba</h3>
+                        <p class="civ-desc text-ar">أصحاب سد مأرب العظيم، ورموز الحكمة، والازدهار والسيادة التجارية القديمة التي ربطت الشرق بالغرب.</p>
+                        <p class="civ-desc text-en">The builders of the Great Ma'rib Dam, symbols of wisdom, prosperity, and ancient commercial sovereignty.</p>
+                        <a href="#modal-saba" class="btn-card-action">
+                            <span class="text-ar">استكشف الحضارة</span>
+                            <span class="text-en">Explore Civilization</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="civ-card">
+                    <div class="civ-img-container">
+                        <img class="civ-img" src="C:\Users\ALARABY\Downloads\قرناو.jpg" alt="Main">
+                    </div>
+                    <div class="civ-content">
+                        <h3 class="civ-title text-ar">مملكة معين</h3>
+                        <h3 class="civ-title text-en">Kingdom of Ma'in</h3>
+                        <p class="civ-desc text-ar">أعظم تجار اللبان والطرق البرية، ورواد القوانين التجارية والكتابة الأبجدية في شبه الجزيرة.</p>
+                        <p class="civ-desc text-en">Great merchants of frankincense and overland routes, pioneers of commercial laws and alphabetic writing.</p>
+                        <a href="#modal-main" class="btn-card-action">
+                            <span class="text-ar">استكشف الحضارة</span>
+                            <span class="text-en">Explore Civilization</span>
+                        </a>
+                    </div>
+                </div>
+
+               
+                <div class="civ-card">
+                    <div class="civ-img-container">
+                        <img class="civ-img" src="C:\Users\ALARABY\Downloads\YF2023-07-15-5337.jpg" alt="Hadramout">
+                    </div>
+                    <div class="civ-content">
+                        <h3 class="civ-title text-ar">حضرموت</h3>
+                        <h3 class="civ-title text-en">Hadramout</h3>
+                        <p class="civ-desc text-ar">أرض اللبان الفاخر والتجارة البحرية العالمية التي تسيّدت موانئ بحر العرب ووصلت للهند وروما.</p>
+                        <p class="civ-desc text-en">The land of luxury frankincense and global maritime trade that reached the edges of India and Rome.</p>
+                        <a href="#modal-hadramout" class="btn-card-action">
+                            <span class="text-ar">استكشف الحضارة</span>
+                            <span class="text-en">Explore Civilization</span>
+                        </a>
+                    </div>
+                </div>
+
+          
+                <div class="civ-card">
+                    <div class="civ-img-container">
+                        <img class="civ-img" src="C:\Users\ALARABY\Downloads\5697201707.jpg" alt="Himyar">
+                    </div>
+                    <div class="civ-content">
+                        <h3 class="civ-title text-ar">مملكة حمير</h3>
+                        <h3 class="civ-title text-en">Kingdom of Himyar</h3>
+                        <p class="civ-desc text-ar">القوة السياسية والعسكرية الكبرى التي استطاعت توحيد كامل الأراضي اليمنية تحت تاج ملكي صلب.</p>
+                        <p class="civ-desc text-en">The great military and political power that united the entire Yemen under one solid crown.</p>
+                        <a href="#modal-himyar" class="btn-card-action">
+                            <span class="text-ar">استكشف الحضارة</span>
+                            <span class="text-en">Explore Civilization</span>
+                        </a>
+                    </div>
+                </div>
+
+      
+                <div class="civ-card">
+                    <div class="civ-img-container">
+                        <img class="civ-img" src="C:\Users\ALARABY\Downloads\images (5).jpg" alt="Awsan">
+                    </div>
+                    <div class="civ-content">
+                        <h3 class="civ-title text-ar">أوسان</h3>
+                        <h3 class="civ-title text-en">Awsan</h3>
+                        <p class="civ-desc text-ar">حاضرة الجنوب المفقودة، ذات العمق التجاري الإفريقي العريض والفنون النحتية الفريدة.</p>
+                        <p class="civ-desc text-en">The lost southern metropolis, possessing extensive African trade depth and unique arts.</p>
+                        <a href="#modal-awsan" class="btn-card-action">
+                            <span class="text-ar">استكشف الحضارة</span>
+                            <span class="text-en">Explore Civilization</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="landmarks-page" class="page-section section-padding">
+            <div class="section-header">
+                <h2 class="text-ar">أشهر المعالم الأثرية في اليمن</h2>
+                <h2 class="text-en">Famous Monuments of Yemen</h2>
+            </div>
+
+            <div class="landmarks-grid">
+   
+                <div class="landmark-card">
+                    <div class="landmark-img-container">
+                        <img src="C:\Users\ALARABY\Downloads\سد-مأرب.jpg"  alt="Ma'rib Dam">
+                    </div>
+                    <div class="landmark-content">
+                        <h4 class="landmark-title text-ar">سد مأرب القديم</h4>
+                        <h4 class="landmark-title text-en">Great Ma'rib Dam</h4>
+                        <p class="landmark-desc text-ar">أعجوبة هندسية قديمة للتحكم بالسيول والري، حولت الصحاري القاحلة لجنات معلقة.</p>
+                        <p class="landmark-desc text-en">An ancient engineering marvel of irrigation that turned barren deserts into gardens.</p>
+                        <a href="#modal-dam-detail" class="btn-card-action" style="margin-top:15px;">
+                            <span class="text-ar">استكشف المعلم</span>
+                            <span class="text-en">Explore Monument</span>
+                        </a>
+                    </div>
+                </div>
+
+             
+                <div class="landmark-card">
+                    <div class="landmark-img-container">
+                        <img src="C:\Users\ALARABY\Downloads\YF2023-12-01-8791.jpg" alt="Awam Temple">
+                    </div>
+                    <div class="landmark-content">
+                        <h4 class="landmark-title text-ar">معبد أوام</h4>
+                        <h4 class="landmark-title text-en">Awam Temple</h4>
+                        <p class="landmark-desc text-ar">أقدم وأقدس المعابد المكرسة للمعبود "إل مقه" وحاضن النقوش التاريخية العظيمة.</p>
+                        <p class="landmark-desc text-en">The oldest sacred temple dedicated to "Almaqah" housing grand historical inscriptions.</p>
+                        <a href="#modal-awam-detail" class="btn-card-action" style="margin-top:15px;">
+                            <span class="text-ar">استكشف المعلم</span>
+                            <span class="text-en">Explore Monument</span>
+                        </a>
+                    </div>
+                </div>
+
+        
+                <div class="landmark-card">
+                    <div class="landmark-img-container">
+                        <img src="C:\Users\ALARABY\Downloads\مدينة-حبان.webp" alt="Shabwah">
+                    </div>
+                    <div class="landmark-content">
+                        <h4 class="landmark-title text-ar">مدينة شبوة القديمة</h4>
+                        <h4 class="landmark-title text-en">Ancient Shabwah</h4>
+                        <p class="landmark-desc text-ar">عاصمة مملكة حضرموت التاريخية، المعقل التجاري العظيم ومحطة تجميع البخور.</p>
+                        <p class="landmark-desc text-en">Historic capital of Hadramout, a great commercial stronghold and incense trade hub.</p>
+                        <a href="#modal-shabwah-detail" class="btn-card-action" style="margin-top:15px;">
+                            <span class="text-ar">استكشف المعلم</span>
+                            <span class="text-en">Explore Monument</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+     
+        <div id="museum-page" class="page-section section-padding">
+            <div class="section-header">
+                <h2 class="text-ar">المتحف الرقمي التفاعلي</h2>
+                <h2 class="text-en">Interactive Digital Museum</h2>
+            </div>
+
+            <div class="museum-grid">
+                <div class="museum-card">
+                    <div>
+                        <span class="museum-icon">🕶️</span>
+                        <h3 class="museum-title text-ar">الواقع الافتراضي</h3>
+                        <h3 class="museum-title text-en">Virtual Reality</h3>
+                        <p class="museum-desc text-ar">تجربة فريدة وغامرة تأخذك في جولة ثلاثية الأبعاد داخل المعالم التاريخية اليمنية المعاد بناؤها رقمياً.</p>
+                        <p class="museum-desc text-en">A unique and immersive experience that takes you on a 3D tour inside reconstructed ancient sites.</p>
+                    </div>
+                    <a href="#modal-vr" class="btn-card-action">
+                        <span class="text-ar">ابدأ التجربة</span>
+                        <span class="text-en">Start Experience</span>
+                    </a>
+                </div>
+
+                <div class="museum-card">
+                    <div>
+                        <span class="museum-icon">⏳</span>
+                        <h3 class="museum-title text-ar">الخط الزمني</h3>
+                        <h3 class="museum-title text-en">Timeline</h3>
+                        <p class="museum-desc text-ar">تتبع تاريخ اليمن العريض من العصر البرونزي وحتى نهايات الممالك المستقلة عبر محاكاة زمنية ممتعة.</p>
+                        <p class="museum-desc text-en">Trace Yemen's broad history from the Bronze Age to the end of independent kingdoms.</p>
+                    </div>
+                    <label for="tab-timeline" class="btn-card-action">
+                        <span class="text-ar">استكشف الآن</span>
+                        <span class="text-en">Explore Now</span>
+                    </label>
+                </div>
+
+                <div class="museum-card">
+                    <div>
+                        <span class="museum-icon">🗺️</span>
+                        <h3 class="museum-title text-ar">الخرائط التفاعلية</h3>
+                        <h3 class="museum-title text-en">Interactive Maps</h3>
+                        <p class="museum-desc text-ar">تجول افتراضياً في خريطة اليمن القديمة واكتشف نقاط الحفر والتنقيب ومسارات قوافل اللبان التاريخية بدقة.</p>
+                        <p class="museum-desc text-en">Wander virtually in the map of ancient Yemen and discover excavation points and trade routes.</p>
+                    </div>
+                    <a href="#modal-maps" class="btn-card-action">
+                        <span class="text-ar">فتح الخريطة</span>
+                        <span class="text-en">Open Map</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+     
+        <div id="timeline-page" class="page-section section-padding">
+            <div class="section-header">
+                <h2 class="text-ar">رحلة عبر الزمن (الخط الزمني للحضارات)</h2>
+                <h2 class="text-en">Journey Through Time (Civilizations Timeline)</h2>
+            </div>
+
+            <div class="timeline-wrapper">
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-node">
+                        <div class="timeline-date">2000 ق.م / B.C</div>
+                        <div class="timeline-circle"></div>
+                        <p class="timeline-text text-ar">بدايات الاستقرار البشري الزراعي المنظم في الوديان اليمنية الخصيبة وتشييد المدرجات البدائية.</p>
+                        <p class="timeline-text text-en">The beginnings of organized agricultural human settlement in fertile Yemeni valleys.</p>
+                    </div>
+
+                    <div class="timeline-node">
+                        <div class="timeline-date">1200 ق.م / B.C</div>
+                        <div class="timeline-circle"></div>
+                        <p class="timeline-text text-ar">بزوغ مملكة سبأ كقوة تجارية وسياسية عظمى تبسط هيمنتها على مسارات البخور الإقليمية.</p>
+                        <p class="timeline-text text-en">The formal rise of the Kingdom of Saba as a major commercial and political power.</p>
+                    </div>
+
+                    <div class="timeline-node">
+                        <div class="timeline-date">800 ق.م / B.C</div>
+                        <div class="timeline-circle"></div>
+                        <p class="timeline-text text-ar">ازدهار خط المسند كلغة رسمية للتدوين وكتابة أولى المعاهدات التجارية والقوانين المنظمة.</p>
+                        <p class="timeline-text text-en">Flourishing of Musnad script as an official language for documentation and trade treaties.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        <div id="contact-page" class="page-section section-padding">
+            <div class="section-header">
+                <h2 class="text-ar">تواصل معنا</h2>
+                <h2 class="text-en">Contact Us</h2>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info-panel">
+                    <h3 class="text-ar">المنصة الرقمية لحضارات اليمن</h3>
+                    <h3 class="text-en">Yemen Civilizations Digital Platform</h3>
+                    
+                    <p class="text-ar">نحن نعمل على توثيق وحماية الإرث الإنساني القديم لشبه الجزيرة العربية ونشر الوعي به أكاديمياً وثقافياً.</p>
+                    <p class="text-en">We work on documenting and protecting the ancient human heritage of the Arabian Peninsula and raising academic awareness.</p>
+                    
+                    <ul class="contact-info-list">
+                        <li class="contact-item">
+                            <span class="icon">✉</span>
+                            <span>info@yementcivilizations.com</span>
+                        </li>
+                        <li class="contact-item">
+                            <span class="icon">📞</span>
+                            <span>+967 771 234 567</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="contact-form" action="#">
+                  
+                    <div class="form-group">
+                        <label for="name" class="text-ar">الاسم الكامل</label>
+                        <label for="name" class="text-en">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="..." required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="email" class="text-ar">البريد الإلكتروني</label>
+                        <label for="email" class="text-en">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="..." required>
+                    </div>
+              
+                    <div class="form-group">
+                        <label for="message" class="text-ar">رسالتك</label>
+                        <label for="message" class="text-en">Your Message</label>
+                        <textarea id="message" rows="5" class="form-control" placeholder="..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-gold" style="align-self: flex-start;">
+                        <span class="text-ar">إرسال الرسالة ✉</span>
+                        <span class="text-en">Send Message ✉</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    
+    <footer>
+        <div class="footer-minimal-logo">🏛️</div>
+        <p class="copyright text-ar">جميع الحقوق محفوظة © 2026 حضارات اليمن</p>
+        <p class="copyright text-en">All Rights Reserved © 2026 Yemen Civilizations</p>
+    </footer>
+
+    
+    <a href="#home" class="back-to-top" title="▲">▲</a>
+
+
+ 
+
+
+    <div id="modal-saba" class="modal">
+        <div class="modal-content">
+            <a href="#!" class="modal-close">&times;</a>
+            <h2 class="modal-header text-ar">مملكة سبأ العظيمة (1200 ق.م - 275 م)</h2>
+            <h2 class="modal-header text-en">Great Kingdom of Sheba (1200 BC - 275 AD)</h2>
+            <div class="modal-body">
+                <p class="text-ar">مملكة سبأ هي واحدة من أقدم وأقوى الكيانات السياسية والحضارية التي نشأت في جنوب شبه الجزيرة العربية. برزت قوتها التاريخية مع مطلع الألفية الأولى قبل الميلاد كدولة تجارية وزراعية عظمى، اتخذت من مدينة مأرب عاصمة سياسية ودينية وإدارية لها.</p>
+                <p class="text-ar"><strong>نظام الحكم والشورى:</strong> تميز السبئيون بنظام حكم شوري متطور، حيث كان يقود الدولة في بداياتها الكاهن الأكبر أو ما يعرف بـ "المكرب" الذي يجمع بين السلطتين الروحية والسياسية، ثم تطور الحكم لاحقاً ليصبح ملكياً دستورياً تشارك فيه مجالس العشائر وكبار التجار والوجهاء لتنظيم القوانين وسن التشريعات العادلة، وهو ما أظهره القرآن الكريم والكتب السماوية في قصة الملكة بلقيس (ملكة سبأ) عندما استشارت ملأها وقادتها قبل اتخاذ القرار السيادي.</p>
+                <p class="text-ar"><strong>الهندسة الزراعية وسد مأرب:</strong> شيّد السبئيون "سد مأرب القديم" في القرن الثامن قبل الميلاد كأحد أعظم المعالم الهندسية والري الذكي في العالم القديم. استطاع السد تجميع مياه السيول الموسمية وتوجيهها لري آلاف الهكتارات من الأراضي الصحراوية الشاسعة، محولاً مأرب إلى واحة خضراء غناء عُرفت تاريخياً بـ "الجنتين"، مما وفر للمملكة استقراراً غذائياً واقتصادياً لا مثيل له.</p>
+                <p class="text-ar"><strong>الاقتصاد وتجارة اللبان والبخور:</strong> سيطر السبئيون على "طريق البخور" العالمي، وهو شبكة الطرق البرية والبحرية الأكثر قيمة التي ربطت موانئ الهند والشرق الأقصى بمصر القديمة وبلاد اليونان وروما. كان اللبان، البخور، والبهارات الفريدة التي يتم إنتاجها أو تجميعها في اليمن تعتبر من السلع المقدسة التي لا تستغني عنها معابد الكنائس والطقوس الملكية في روما، مما در على سبأ ثروات هائلة جعلتها توصف من قِبل المؤرخين الإغريق والرومان بـ "العربية السعيدة" (Arabia Felix).</p>
+                <p class="text-ar"><strong>الزوال والانهيار:</strong> تراجع نفوذ المملكة تدريجياً نتيجة النزاعات الداخلية المتكررة مع الممالك المجاورة كقتبان وحضرموت، والصعود العسكري لمملكة حمير، والانهيارات المتكررة لسد مأرب التي أدت في النهاية إلى الهجرة الكبرى للقبائل السبئية عقب سيل العرم العظيم.</p>
+
+                <p class="text-en">The Kingdom of Saba is one of the oldest and most prominent ancient political and cultural entities in the southern Arabian Peninsula. Emerging as a powerhouse at the dawn of the first millennium BC, it established Ma'rib as its spiritual, administrative, and political capital.</p>
+                <p class="text-en"><strong>Governance and Consultation (Shura):</strong> The Sabaeans developed an advanced, consultative political system. In its early stages, it was governed by the "Mukarrib" (the High Priest-King) who unified spiritual and secular powers. Later, it evolved into a constitutional monarchy in which tribal councils, noble merchants, and community leaders actively participated in writing laws. This consultational nature was immortalized in divine books through the narrative of Queen Bilqis, who consulted her nobles before making sovereign decisions.</p>
+                <p class="text-en"><strong>Agricultural Engineering and the Ma'rib Dam:</strong> Built around the 8th century BC, the Great Ma'rib Dam stands as one of the finest hydraulic achievements of antiquity. It successfully harnessed seasonal flash floods, directing them via highly sophisticated sluice gates to irrigate vast desert farmlands. This transformed the dry valleys of Ma'rib into an agricultural heaven famously known as the "Two Gardens", providing unprecedented economic and food security.</p>
+                <p class="text-en"><strong>The Incense Route and Economic Hegemony:</strong> The Sabaeans monopolized the legendary "Incense Route," a highly lucrative network of land and sea lanes linking the luxury markets of India and the Far East with Ancient Egypt, Greece, and Rome. Frankincense, myrrh, and rare spices collected in Yemen were deemed sacred by Roman emperors and temples, bringing massive wealth to Saba and earning the region the Roman title of "Arabia Felix" (Happy Arabia).</p>
+                <p class="text-en"><strong>Decline and Fall:</strong> The empire gradually declined due to protracted civil wars with emerging neighboring kingdoms like Qataban and Hadramout, the rise of the militarily robust Himyarites, and repeated dam failures culminating in the catastrophic collapse of the Ma'rib Dam (The Flood of Al-Arim), which triggered massive tribal migrations out of Yemen.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal-main" class="modal">
+        <div class="modal-content">
+            <a href="#!" class="modal-close">&times;</a>
+            <h2 class="modal-header text-ar">مملكة معين القديمة (القرن السادس ق.م - القرن الأول ق.م)</h2>
+            <h2 class="modal-header text-en">Kingdom of Ma'in (6th Century BC - 1st Century BC)</h2>
+            <div class="modal-body">
+                <p class="text-ar">نشأت مملكة معين القديمة في منطقة الجوف شمالي اليمن، على امتداد وادي مذاب الخصيب. برزت هذه المملكة كواحدة من أرقى الممالك التجارية التي عرفها التاريخ القديم، حيث تخصص شعبها بشكل شبه كامل في التجارة الدولية والوساطة التجارية البرية وتأسيس مستوطنات تجارية مستقلة امتدت من شواطئ البحر الأبيض المتوسط وحتى أطراف المحيط الهندي.</p>
+                <p class="text-ar"><strong>الدبلوماسية وتأسيس المستوطنات:</strong> تميز المعينيون بقدرتهم الاستثنائية على ممارسة الدبلوماسية السلمية وتوقيع المعاهدات الأمنية مع القبائل البدوية لتأمين قوافلهم المحملة باللبان الفاخر والتوابل الفريدة. ولقد أسسوا مدناً تجارية ومستودعات بضائع مستقلة في محطات استراتيجية مثل ديدان (العلا)، غزة، ومصر، وحتى جزيرة ديلوس في اليونان. بفضل هذه الشبكة الواسعة، تمكن المعينيون من التحكم بأسعار اللبان والبخور وتزويد المعابد الفرعونية واليونانية والآشورية بالمواد المقدسة اللازمة للطقوس الدينية.</p>
+                <p class="text-ar"><strong>العمارة والتخطيط المدني:</strong> اتخذ المعينيون من مدينة "قرناو" عاصمة سياسية وتجارية محصنة، وتميزت بتصاميمها الهندسية المتقنة من الجدران الحجرية الضخمة التي حمت قصور الملوك والنبلاء. كما كانت مدينة "يثيل" (المعروفة اليوم ببراقش) العاصمة الدينية والمركز العسكري الحصين، وتتميز بأسوارها الحجرية الشاهقة المزخرفة بالنقوش المعينية الفريدة التي لا زالت تقاوم عوامل الزمن حتى يومنا هذا لتشهد على عظمة البناء المعيني.</p>
+                <p class="text-ar"><strong>الخط المعيني والتدوين:</strong> كان المعينيون من أكثر الشعوب استخداماً وتطويراً لخط المسند العربي الجنوبي. وثقوا من خلاله صفقاتهم التجارية، وتفاصيل بضائعهم، والضرائب المفروضة، والعهود السياسية. وتعد نقوشهم من أغنى المصادر التاريخية التي ساهمت في فهم بنية التجارة القديمة واللسانيات وحركة القوافل عبر الصحراء العربية الشاسعة.</p>
+
+                <p class="text-en">The ancient Kingdom of Ma'in flourished in the Al-Jawf region of northern Yemen, situated along the fertile Wadi Madhab. It emerged as one of the most prominent mercantile civilizations of antiquity, with its population dedicating themselves almost entirely to global trade, overland commercial mediation, and the establishment of independent trading colonies spanning from the Mediterranean shores to the Indian Ocean.</p>
+                <p class="text-en"><strong>Diplomacy and Colonies:</strong> The Minaeans were exceptionally skilled in peaceful diplomacy and the negotiation of security pacts with nomadic tribes to secure their caravans laden with premium frankincense and rare spices. They set up independent trading hubs and warehouses at strategic waypoints such as Dedan (AlUla), Gaza, Egypt, and even the Greek island of Delos. Through this network, they controlled the flow and prices of holy incenses utilized in Egyptian, Greek, and Assyrian temples.</p>
+                <p class="text-en"><strong>Urban Planning and Architecture:</strong> The Minaeans established "Qarnaw" as their fortified political capital, renowned for massive stone walls protecting royal palaces. Meanwhile, "Yathill" (modern-day Baraqish) served as their religious capital and heavily fortified military stronghold, characterized by remarkably tall stone ramparts adorned with exquisite Minaean inscriptions that remain standing to this day.</p>
+                <p class="text-en"><strong>Inscriptions and Documentation:</strong> The Minaeans extensively used and refined the South Arabian Musnad script. They documented commercial transactions, cargo details, tariffs, and political pacts. Their stone-carved inscriptions are among the richest historical archives, providing deep insights into ancient business patterns and caravan logistics across the Arabian Desert.</p>
+            </div>
+        </div>
+    </div>
+
+  
+    <div id="modal-hadramout" class="modal">
+        <div class="modal-content">
+            <a href="#!" class="modal-close">&times;</a>
+            <h2 class="modal-header text-ar">مملكة حضرموت القديمة</h2>
+            <h2 class="modal-header text-en">Ancient Kingdom of Hadramout</h2>
+            <div class="modal-body">
+                <p class="text-ar">تعتبر مملكة حضرموت واحدة من أعرق الكيانات السياسية والحضارية في جنوب الجزيرة العربية، وامتد نفوذها الجغرافي الواسع على طول وادي حضرموت الخصيب والهضاب المجاورة وموانئ بحر العرب الاستراتيجية. تميزت هذه المملكة بعمقها البحري والتجاري العالمي بفضل السيطرة المطلقة على أجود أنواع أشجار اللبان في العالم.</p>
+                <p class="text-ar"><strong>السيطرة على تجارة اللبان الفاخر:</strong> كانت حضرموت تمتلك المورد الأكثر قيمة في العالم القديم وهو "اللبان المقدّس" الذي ينمو في أوديتها الداخلية وهضاب ظفار. كان هذا المنتج من المتطلبات الأساسية للعبادة وتقديم القرابين وتحنيط الموتى في الحضارات الفرعونية واليونانية والامبراطورية الرومانية. فرضت المملكة سيطرة حازمة على مناطق حصاد اللبان، واشترطت نقله حصرياً إلى العاصمة شبوة لدفع الضرائب والحصول على أختام الملوك الرسمية قبل السماح بتصديره خارج البلاد.</p>
+                <p class="text-ar"><strong>العاصمة شبوة المنيعة وميناء قنا التاريخي:</strong> اتخذ الحضارمة من مدينة "شبوة" عاصمة تاريخية حصينة، أحاطوها بأسوار دفاعية معقدة لحمايتها من الغزاة، واشتهرت باحتضانها لأكثر من 60 معبداً دينياً وقصوراً ملكية فخمة مبنية بالحجر المنحوت والخشب المزين. بالإضافة لعاصمتهم البرية، شيّد الحضارمة ميناء "قنا" التاريخي (بير علي حالياً) كأحد أهم الموانئ البحرية العالمية التي ربطت طرق الملاحة بين الهند ومصر القديمة والخليج العربي وممالك البحر الأبيض المتوسط، مما سمح للبضائع اليمنية بالوصول بحراً إلى أقاصي المعمورة القديمة.</p>
+                <p class="text-ar"><strong>النهضة المعمارية والتراث الثقافي:</strong> ترك الحضارمة القدامى إرثاً معمارياً عظيماً شمل السدود الحجرية وقنوات الري الدقيقة ونظام حماية الوديان من السيول الجارفة. كما تميزوا بنقوشهم المكتوبة بخط المسند التي سجلت القوانين والاتفاقيات، والفنون النحتية الرفيعة التي عكست الملامح والملابس التقليدية التي تميز بها شعب حضرموت العريق.</p>
+
+                <p class="text-en">The Kingdom of Hadramout is one of the oldest and most geographically extensive political and cultural entities of southern Arabia. Stretching along the fertile Hadramout Valley, adjoining plateaus, and strategic Arabian Sea coastlines, this kingdom established deep-rooted global maritime and terrestrial trade links by monopolizing the harvesting of the finest frankincense in the ancient world.</p>
+                <p class="text-en"><strong>The Frankincense Monopoly:</strong> Hadramout possessed the most prized commodity of antiquity: holy frankincense, which grew naturally in its interior valleys and the Dharfur plateaus. This resin was highly demanded for temple rituals, funerals, and mummification in Egypt, Greece, and the Roman Empire. The Hadrami monarchs imposed strict state controls on harvesting, mandating that all resin be transported directly to the capital, Shabwah, to pay royalties and receive royal clearance seals before export.</p>
+                <p class="text-en"><strong>Fortified Shabwah and Port of Qana:</strong> The Hadramis designated "Shabwah" as their fortified capital, surrounding it with complex defensive walls. It boasted over 60 temples and royal palaces built with precision-cut stone and carved timber. Supporting their maritime empire, they constructed the deep-water port of "Qana" (modern Bir Ali), a global maritime hub connecting sea lanes between India, Ancient Egypt, the Persian Gulf, and the Mediterranean, allowing Yemeni spices to reach far-off markets.</p>
+                <p class="text-en"><strong>Architectural and Cultural Legacy:</strong> The ancient Hadramis left behind monumental stone dams, precise irrigation systems, and seasonal flood prevention networks. Their rich heritage is preserved through South Arabian Musnad inscriptions recording local statutes and sophisticated stone sculptures depicting the distinct features and attire of this noble civilization.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal-himyar" class="modal">
+        <div class="modal-content">
+            <a href="#!" class="modal-close">&times;</a>
+            <h2 class="modal-header text-ar">مملكة حمير الفتية والتوحيد الكبير</h2>
+            <h2 class="modal-header text-en">The Himyarite Kingdom and Great Unification</h2>
+            <div class="modal-body">
+                <p class="text-ar">مملكة حمير هي الوريثة الكبرى للحضارات اليمنية القديمة، والعصر الذهبي الأخير للممالك اليمنية المستقلة. تأسست في المرتفعات الجبلية الوسطى (يريم) في القرن الثاني قبل الميلاد، واستطاعت بفضل قوتها العسكرية الفائقة وحكمتها السياسية إخضاع الممالك القديمة وتوحيد اليمن بالكامل تحت مسمى ملكي واحد هو "ملك سبأ وذو ريدان وحضرموت ويمنت وأعرابهم في المرتفعات والتهائم".</p>
+                <p class="text-ar"><strong>العاصمة الجبلية ظفار وقصر غمدان:</strong> اتخذ الحميريون من مدينة "ظفار" (قرب يريم) عاصمة سياسية وعسكرية منيعة تميزت بحصونها الشاهقة وقصورها الملكية الفخمة مثل قصر "ريدان". كما ارتبط العهد الحميري بقصر "غمدان" التاريخي في صنعاء، والذي وُصف في المصادر التاريخية بأنه أول وأشهر ناطحة سحاب بناها الإنسان في التاريخ البشري، حيث بلغ ارتفاعه عشرين طابقاً، وتميز بسقف شفاف مبني من ألواح الرخام الشفاف والمرمر الذي يعكس ضوء القمر والنجوم لملوك حمير بجمال منقطع النظير.</p>
+                <p class="text-ar"><strong>الهندسة الزراعية والمدرجات الجبلية المعلقة:</strong> نظراً للبيئة الجبلية الوعرة لمناطقهم، ابتكر الحميريون نظاماً زراعياً ثورياً تمثل في "المدرجات الزراعية المعلقة" على منحدرات الجبال الشاهقة، حيث صمموها لحفظ التربة الخصبة واستغلال الأمطار الموسمية بأقصى كفاءة عبر قنوات وحواجز مائية دقيقة لا زال المزارع اليمني يستخدمها حتى اليوم كتحفة هندسية زراعية متوارثة منذ آلاف السنين.</p>
+                <p class="text-ar"><strong>العصر السياسي الأخير والصراعات الدولية:</strong> شهد العهد الحميري صراعات سياسية كبرى مع الإمبراطورية البيزنطية وحلفائها الأحباش للسيطرة على طرق التجارة البحرية في البحر الأحمر، وبرز من ملوكهم شخصيات بارزة مثل الملك أسعد الكامل والملك ذو نواس، والذين واجهوا الغزو الخارجي حتى سقوط المملكة وبداية دخول اليمن تحت النفوذ الساساني ثم العصر الإسلامي.</p>
+
+                <p class="text-en">The Himyarite Kingdom was the grand successor of the ancient Yemeni civilizations and represents the final golden era of unified, sovereign Yemen. Founded in the rugged central highlands (Yarim) during the 2nd century BC, its formidable military strength and political astuteness enabled it to unify all ancient kingdoms under a single crown: "King of Saba, Dhu Raydan, Hadramout, Yamnat, and their Arabs in the Highlands and Tihamah."</p>
+                <p class="text-en"><strong>Highland Capital Zafar and Ghumdan Palace:</strong> The Himyarites chose "Zafar" (near Yarim) as their impregnable capital, famed for lofty fortresses and royal keeps like Dhu Raydan Castle. The Himyarite era is also inextricably linked to the legendary "Ghumdan Palace" in Sana'a, widely described by early chroniclers as one of the earliest high-rise structures in human history, rising twenty stories high and featuring a translucent alabaster roof that illuminated the royal chambers under starlight.</p>
+                <p class="text-en"><strong>Terrace Agriculture and Hydrology:</strong> Facing a steep highland environment, the Himyarites pioneered a revolutionary agricultural technique by cutting "hanging terraces" directly into steep mountain slopes. These terrace walls conserved topsoil and distributed seasonal rainwater with maximum efficiency through complex stone canals—an engineering layout still utilized by Yemeni farmers today as a legacy passed down through generations.</p>
+                <p class="text-en"><strong>Late Era and Geopolitical Conflicts:</strong> The Himyarite Empire engaged in massive geopolitical struggles with the Byzantine Empire and its Aksumite allies to maintain control over Red Sea shipping lanes. Notable figures such as King As'ad Al-Kamil and King Dhu Nuwas actively resisted external conquests until the collapse of the kingdom, leading to Aksumite, Sasanian, and ultimately Islamic eras in Yemen.</p>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="modal-awsan" class="modal">
+        <div class="modal-content">
+            <a href="#!" class="modal-close">&times;</a>
+            <h2 class="modal-header text-ar">مملكة أوسان الغامضة والمفقودة</h2>
+            <h2 class="modal-header text-en">The Mysterious Kingdom of Awsan</h2>
+            <div class="modal-body">
+                <p class="text-ar">مملكة أوسان هي واحدة من أكثر الممالك القديمة غموضاً وعراقة في جنوب اليمن، ونشأت في وادي مرخة الخصيب وشواطئ الجنوب الحيوية. تميزت أوسان بنشاطها البحري والتجاري المبكر وقدرتها على نسج علاقات تجارية بحرية متطورة مع سواحل شرق إفريقيا (الحبشة وزنجبار) والسيطرة على بعض الموانئ الحيوية هناك قبل صعود الممالك اليمنية الكبرى.</p>
+                <p class="text-ar"><strong>النهضة الفنية والنحت الأوساني الفريد:</strong> تميز الأوسانيون القدامى بنهضة فنية متقدمة في مجالات النحت على الرخام والمرمر، حيث ترك نحاتو أوسان مجموعة من التماثيل الفنية الفريدة للملوك والنبلاء تميزت بدقتها العالية ووقار ملامحها وتفاصيل ملابسهم الراقية التي تشبه الطراز الإغريقي والهيلينستي، مما يكشف عن تأثر فني وتجاري مبكر بحضارات البحر الأبيض المتوسط القديمة.</p>
+                <p class="text-ar"><strong>العاصمة حجر يهر الحرب والاندثار:</strong> كانت مدينة "حجر يهر" عاصمة أوسان الكبرى ومركزاً اقتصادياً وتجارياً غنياً لإنتاج اللبان وتجارة العاج القادم من إفريقيا. دخلت أوسان في صراعات عسكرية طاحنة مع مملكة سبأ في عهد الملك السبئي "كرب إيل وتر" (القرن السابع ق.م)، والذي شن حرباً كبرى دمر فيها عاصمتهم وأخضع أوسان للسيادة السبئية، مما جعل تفاصيل هذه المملكة العظيمة تندثر تدريجياً وتتحول إلى كنز أثري مدفون تحت رمال أودية مرخة بانتظار المزيد من التنقيب والاستكشاف.</p>
+
+                <p class="text-en">The Kingdom of Awsan is one of the most enigmatic and ancient civilizations of southern Yemen, taking root in the fertile Wadi Markhah and strategic coastal outlets. Awsan stood out for its early maritime prowess and its capacity to cultivate advanced trade networks with East African coastlines (Abyssinia and Zanzibar), exerting direct influence over African shipping ports prior to the hegemony of other Yemeni kingdoms.</p>
+                <p class="text-en"><strong>Awsanian Sculpture and Refined Art:</strong> The ancient Awsanians experienced an advanced artistic renaissance, particularly in marble and alabaster carving. Awsanian master sculptors left behind exceptional busts and statues of royalty, characterized by refined precision, dignified facial expressions, and finely carved robes resembling Hellenistic and Greco-Roman styles. This attests to early trade and aesthetic dialogues with Mediterranean civilizations.</p>
+                <p class="text-en"><strong>Capital Hajar Yahirr and Eclipse:</strong> "Hajar Yahirr" served as the grand Awsanian capital, functioning as a wealthy commercial hub trading in frankincense and imported African ivory. However, Awsan entered into conflicts with the expansionist Kingdom of Saba during the reign of the great Sabaean King "Karib'il Watar" (7th century BC). In a major campaign, Sabaean forces destroyed Hajar Yahirr, subordinating Awsan and causing its memory to fade under the sands of Wadi Markhah, leaving behind archaeological secrets awaiting discovery.</p>
+            </div>
+        </div>
+    </div>
+
+  
+    <div id="modal-about" class="modal">
+        <div class="modal-content">
+            <a href="#!" class="modal-close">&times;</a>
+            <h2 class="modal-header text-ar">مشروع حضارات اليمن الرقمية</h2>
+            <h2 class="modal-header text-en">Yemen Digital Civilizations Project</h2>
+            <div class="modal-body">
+                <p class="text-ar">مشروع "حضارات اليمن الرقمية" هو منصة معرفية تهدف إلى تسليط الضوء على الإرث التاريخي المنسي والفريد لليمن القديم وحمايته وتوثيقه رقمياً للأجيال القادمة.</p>
+                <p class="text-ar">كانت أرض اليمن السعيد موطناً لأبرز الابتكارات الهندسية والزراعية الذكية التي أبهرت مؤرخي اليونان وروما، حيث عُرفت بـ "العربية السعيدة" نظراً لوفرة مياهها وعمرانها وقدرة إنسانها القديم على قهر الطبيعة الجبلية وبناء السدود ونحت المعابد وتطوير خط المسند العربي العريق، ويسعى هذا المشروع لتقديم نافذة تفاعلية سهلة لاستكشاف هذا الإرث العظيم.</p>
+                <p class="text-en">The "Yemen Digital Civilizations Project" is an educational platform dedicated to highlighting and preserving the historical legacy of ancient Yemen for future generations.</p>
+                <p class="text-en">Known in classical antiquity as "Arabia Felix" (Happy Arabia), this land was home to pioneering engineering, hydraulic, and agricultural achievements that amazed early Greek and Roman chroniclers. This project seeks to build an easy, interactive window to explore this profound history.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-dam-detail" class="modal">
+        <div class="modal-content">
+            <a href="#!" class="modal-close">&times;</a>
+            <h2 class="modal-header text-ar">سد مأرب القديم: معجزة الهندسة الهيدروليكية</h2>
+            <h2 class="modal-header text-en">The Great Ma'rib Dam: Hydraulic Miracle</h2>
+            <div class="modal-body">
+                <p class="text-ar">سد مأرب القديم هو أحد أهم وأعظم المعالم الهندسية والإنشائية التي عرفها العالم القديم، ويُعتبر رمزاً لقدرة الإنسان اليمني على ترويض الطبيعة الجافة وتطوير نظام ري زراعي ذكي حير المهندسين والباحثين عبر العصور.</p>
+                <p class="text-ar"><strong>تاريخ التشييد والتطوير:</strong> يعود تاريخ البناء الأولي للسد إلى الألفية الثانية قبل الميلاد، حيث مر بمراحل تطوير وتوسعة متتالية بلغت ذروتها في القرن الثامن قبل الميلاد على يد المكربين والملوك السبئيين (مثل سمح علي ينوف ويثع أمر بين). كان السد عبارة عن جدار ترابي وحجري ضخم يمتد بطول 580 متراً وبارتفاع يزيد عن 15 متراً، ويربط بين جبلين (بلق الأيمن وبلق الأيسر)، ليقوم بحجز وتجميع المياه الناتجة عن السيول الموسمية العنيفة المتدفقة عبر وادي أذنة الشديد الانحدار.</p>
+                <p class="text-ar"><strong>التصميم الهندسي المعجز:</strong> تميز السد بتصميم هيدروليكي فائق الذكاء شمل بناء مصارف وموزعات مياه حجرية ضخمة ومتقنة النحت عُرفت بـ "الصدفين" (الصدف الشمالي والصدف الجنوبي). صُممت هذه المصارف لتخفيف ضغط المياه الهائل وتوجيهها بدقة عبر قنوات حجرية ممتدة لري الأراضي الزراعية في مأرب بشكل عادل، مما حول الصحراء القاحلة إلى رقعة زراعية خصبة عُرفت بـ "الجنتين" المذكورتين في القرآن الكريم.</p>
+                <p class="text-ar"><strong>الانهيار التاريخي:</strong> واجه السد عبر تاريخه الطويل انهيارات متعددة نتيجة السيول غير العادية، وكان الملوك يقومون بترميمه بجهود جبارة نُقشت تفاصيلها على أحجار السد (مثل ترميمات الملك شمر يهرع والملك الحميري شرحبيل يعفر، وحاكم اليمن أبرهة). لكن في النهاية، في القرن السادس الميلادي، تسببت الأوضاع السياسية والاقتصادية المتدهورة وتراكم الأتربة في قاع السد إلى إهمال صيانته، مما أدى لانهياره الكلي النهائي بـ "سيل العرم" وهجرة القبائل اليمنية الشهيرة.</p>
+
+                <p class="text-en">The Great Ma'rib Dam is one of the premier engineering and construction feats of antiquity, symbolizing the ancient Yemeni capability to master arid terrain and develop a state-of-the-art irrigation system that has fascinated historians and modern engineers alike.</p>
+                <p class="text-en"><strong>Construction and Evolution:</strong> Initial works on the dam date back to the 2nd millennium BC, undergoing successive expansions that peaked during the 8th century BC under Sabaean Mukarribs (such as Sumhu'alay Yanuf). The dam stretched 580 meters in length and over 15 meters in height, spanning the gap between the Jabal Balaq mountains to collect powerful seasonal runoffs sweeping down Wadi Adhanah.</p>
+                <p class="text-en"><strong>Ingenious Sluice Design:</strong> The dam featured an incredibly smart hydraulic design utilizing massive, finely-cut stone sluices called "Al-Sadafayn" (the northern and southern sluice systems). These works relieved the immense water pressure and distributed water through miles of masonry canals to irrigate agricultural basins, turning dry tracts into the "Two Gardens" referenced in divine books.</p>
+                <p class="text-en"><strong>The Historic Collapse:</strong> Over its lifespan, the dam suffered several breaches from extreme floods, prompting grand restoration projects recorded in stone (including repairs by King Shammar Yahar'ish, the Himyarite King Sharahbil Yakkuf, and Abraha). Ultimately, in the 6th century AD, socio-political decay and heavy siltation led to the neglect of its maintenance, resulting in the final catastrophic collapse (The Flood of Al-Arim) and the dispersion of Arab tribes.</p>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="modal-awam-detail" class="modal">
+        <div class="modal-content">
+            <a href="#!" class="modal-close">&times;</a>
+            <h2 class="modal-header text-ar">معبد أوام (محرم بلقيس): قداسة التاريخ ونقوش المسند</h2>
+            <h2 class="modal-header text-en">Awam Temple: Sacred History and Inscriptions</h2>
+            <div class="modal-body">
+                <p class="text-ar">معبد أوام، والمعروف شعبياً باسم "محرم بلقيس"، هو أقدم وأكبر مجمع ديني وتاريخي كُرّس للمعبود الرئيسي للدولة السبئية "إل مقه" (رمز الحكمة والنماء)، ويقع قرب العاصمة مأرب. يمثل المعبد المركز الروحي لحضارة سبأ، ومحجاً سنوياً كانت تقصده وفود القبائل والممالك المجاورة لتقديم القرابين وتجديد العهود والولاء السياسي لملوك سبأ.</p>
+                <p class="text-ar"><strong>التصميم الهندسي المهيب:</strong> يتميز معبد أوام بتصميم معماري فريد يتكون من سور بيضاوي ضخم يبلغ محيطه حوالي 300 متر وبسمك يصل إلى 4 أمتار، مبني بدقة متناهية من كتل حجرية مصقولة ومجهزة بعناية فائقة دون استخدام مادة الملاط، وهو ما مكّن السور من الصمود آلاف السنين. يتقدم المعبد مدخل رئيسي مهيب ترتكز عليه "الأعمدة الثمانية" الحجرية الشهيرة المنحوتة من قطعة صخرية واحدة، والتي تعد الرمز البصري الأشهر للآثار اليمنية القديمة.</p>
+                <p class="text-ar"><strong>أرشيف نقوش المسند التاريخية:</strong> يُعتبر معبد أوام بمثابة "الأرشيف التاريخي الأكبر لسبأ"، حيث تغطي جدرانه وأعمدته وممراته مئات النقوش المنحوتة بخط المسند. توثق هذه النقوش السلالات الملكية، والمعارك العسكرية الكبرى، والعهود السياسية، وقوانين التجارة والري، والقرابين المقدمة، مما جعل المعبد المصدر الأول والموثوق للمؤرخين والباحثين في فك رموز ولسانيات وتاريخ الممالك العربية الجنوبية القديمة.</p>
+
+                <p class="text-en">The Awam Temple, popularly referred to as "Mahram Bilqis," is the oldest and largest sacred sanctuary dedicated to the state deity of Saba, "Almaqah". Located near Ma'rib, it served as the spiritual axis of Sabaean civilization and a global pilgrimage site where tribes gathered annually to offer sacrifices and pledge political loyalty to the monarchs.</p>
+                <p class="text-en"><strong>Monumental Architecture:</strong> The temple is distinguished by a grand oval wall measuring approximately 300 meters in circumference and up to 4 meters in thickness, constructed with precision-cut limestone blocks fitted without mortar. Its front portal is flanked by the legendary "Eight Monolith Columns", carved from solid rock, which serve as the iconic visual symbol of ancient Yemeni heritage.</p>
+                <p class="text-en"><strong>The Library of Musnad Inscriptions:</strong> Awam Temple functions as the ultimate stone library of Sabaean history. Hundreds of South Arabian Musnad inscriptions cover its stones, documenting royal genealogies, military conquests, administrative decrees, agricultural laws, and sacred dedications, making the sanctuary the primary archive for deciphering the history of southern Arabia.</p>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div id="modal-shabwah-detail" class="modal">
+        <div class="modal-content">
+            <a href="#!" class="modal-close">&times;</a>
+            <h2 class="modal-header text-ar">مدينة شبوة القديمة: حاضرة قوافل البخور</h2>
+            <h2 class="modal-header text-en">Ancient Shabwah: Metropolis of Incense</h2>
+            <div class="modal-body">
+                <p class="text-ar">مدينة شبوة القديمة هي العاصمة التاريخية والحصينة لمملكة حضرموت، وتقع في أطراف رملة السبعتين. كانت شبوة تعتبر "قلب تجارة اللبان والبخور" في العالم القديم، ومحطة إجبارية لا بد لجميع القوافل التجارية القادمة من موانئ بحر العرب والهند من المرور بها ودفع الضرائب المقررة لملوك حضرموت.</p>
+                <p class="text-ar"><strong>التنظيم المدني والتحصين الدفاعي:</strong> بُنيت شبوة بتخطيط مدني متطور وفريد، حيث كانت محاطة بأسوار دفاعية حجرية مزدوجة وخنادق عميقة لحمايتها من الغزاة، واحتوت على بوابات ضخمة تخضع لرقابة عسكرية مشددة لتنظيم دخول البضائع وخروج القوافل. تميزت المدينة من الداخل بشبكة شوارع دائرية تحيط بـ "قصر شقر" الملكي الشهير الذي كان يمثل المركز الإداري والسياسي، واحتضنت المدينة أكثر من 60 معبداً قديماً، مما جعلها عاصمة دينية مقدسة وتجارية غنية في آن واحد.</p>
+                <p class="text-ar"><strong>منجم الملح والنظام الزراعي:</strong> بالإضافة لتجارة اللبان، اشتهرت شبوة باستغلال مناجم الملح الصخري القريبة وتصديره للممالك الأخرى، مما شكل مصدراً اقتصادياً إضافياً هاماً. كما طور سكان شبوة القدامى شبكة ري وقنوات حجرية مذهلة للاستفادة من مياه السيول الموسمية الشحيحة لري حقولهم المحيطة بالمدينة، مما مكنهم من تحقيق الاستقرار الغذائي داخل عاصمتهم الصحراوية المنيعة.</p>
+
+                <p class="text-en">Ancient Shabwah was the heavily fortified historic capital of the Kingdom of Hadramout, situated at the edge of the Ramlat al-Sab'atayn desert. It was recognized as the supreme hub of the incense trade, operating as an obligatory checkpoint where all trade caravans coming from India and the Arabian Sea ports had to register and pay royalties to the Hadramout state.</p>
+                <p class="text-en"><strong>Urban Layout and Defense:</strong> Shabwah was constructed with advanced urban planning, protected by double stone walls and deep defensive moats. It featured massive gates monitored by guards to regulate incoming goods. Indoors, circular streets surrounded the grand royal palace of "Shaqr," the administrative hub. Housing over 60 temples, it was simultaneously a holy capital and a wealthy trading center.</p>
+                <p class="text-en"><strong>Salt Mines and Agriculture:</strong> In addition to incense, Shabwah gained fame for mining rock salt and exporting it to neighboring empires, providing an extra source of revenue. The ancient inhabitants of Shabwah also designed intricate water catchments and stone sluices to divert seasonal flash floods for irrigating basin fields, achieving agricultural self-sufficiency within their desert fortress.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal-vr" class="modal">
+        <div class="modal-content">
+            <a href="#!" class="modal-close">&times;</a>
+            <h2 class="modal-header text-ar">محاكاة الواقع الافتراضي VR</h2>
+            <h2 class="modal-header text-en">Virtual Reality Simulation</h2>
+            <div class="modal-body">
+                <p class="text-ar">جاري تطوير البيئات الافتراضية التفاعلية!</p>
+                <p class="text-en">Virtual interactive environments are currently under development!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal-maps" class="modal">
+        <div class="modal-content">
+            <a href="#!" class="modal-close">&times;</a>
+            <h2 class="modal-header text-ar">الخريطة الأثرية التفاعلية لليمن</h2>
+            <h2 class="modal-header text-en">Archaeological Interactive Map</h2>
+            <div class="modal-body">
+                <p class="text-ar">هذه الخريطة ترصد أكثر من 120 موقعاً أثرياً نشطاً.</p>
+                <p class="text-en">This map monitors over 120 active archaeological sites.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-artifacts" class="modal">
+        <div class="modal-content">
+            <a href="#!" class="modal-close">&times;</a>
+            <h2 class="modal-header text-ar">معرض التحف والقطع النادرة</h2>
+            <h2 class="modal-header text-en">Artifacts Exhibition</h2>
+            <div class="modal-body">
+                <p class="text-ar">أهلاً بك في المعرض الرقمي للتحف اليمنية.</p>
+                <p class="text-en">Welcome to the digital exhibition of Yemeni antiquities.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
